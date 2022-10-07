@@ -1,0 +1,313 @@
+{
+	"info": {
+		"_postman_id": "19165ce5-ac98-4197-8c02-3567cdf848a4",
+		"name": "todo app collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9134823"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"email\":\"test123@gmail.com\",\r\n\"password\":\"Admin!23\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8200/api/v1/signup",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8200",
+					"path": [
+						"api",
+						"v1",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"email\":\"test123@gmail.com\",\r\n\"password\":\"Admin!23\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8200/api/v1/signin",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8200",
+					"path": [
+						"api",
+						"v1",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "change password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NDkxMDg5NSwianRpIjoiY2ZjNzM2YWQtZmNhYS00NjhlLTg5M2YtNDcxNTUxMGQxYzNlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNjY0OTEwODk1LCJleHAiOjE2NjQ5MTE3OTV9.-YwCQ34nG-MRjQTM5ZeVVv8h4QFwhnZ9GquvLazGdQs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\":\"Admin!23\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8200/api/v1/changePassword",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8200",
+					"path": [
+						"api",
+						"v1",
+						"changePassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add item in todo list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NDkxMjQ4MywianRpIjoiNjg0NWMzNWUtNzZkZC00ZDQ3LTg1NTctMzg2YjFiODY5ZjkyIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNjY0OTEyNDgzLCJleHAiOjE2NjQ5MTMzODN9.Y3qTGXjEApBD5CT0Li3eq9G14onxpdChi38d6J8tdhM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\":\"todo test 1\",\r\n\"description\":\"check to added or not\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8200/api/v1/todos",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8200",
+					"path": [
+						"api",
+						"v1",
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get todo list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NDkxMjQ4MywianRpIjoiNjg0NWMzNWUtNzZkZC00ZDQ3LTg1NTctMzg2YjFiODY5ZjkyIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNjY0OTEyNDgzLCJleHAiOjE2NjQ5MTMzODN9.Y3qTGXjEApBD5CT0Li3eq9G14onxpdChi38d6J8tdhM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8200/api/v1/todos",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8200",
+					"path": [
+						"api",
+						"v1",
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get todo list with filter",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NDkxMjQ4MywianRpIjoiNjg0NWMzNWUtNzZkZC00ZDQ3LTg1NTctMzg2YjFiODY5ZjkyIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNjY0OTEyNDgzLCJleHAiOjE2NjQ5MTMzODN9.Y3qTGXjEApBD5CT0Li3eq9G14onxpdChi38d6J8tdhM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8200/api/v1/todos?status=NotStarted",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8200",
+					"path": [
+						"api",
+						"v1",
+						"todos"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "NotStarted"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update todo list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NDkxMjQ4MywianRpIjoiNjg0NWMzNWUtNzZkZC00ZDQ3LTg1NTctMzg2YjFiODY5ZjkyIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNjY0OTEyNDgzLCJleHAiOjE2NjQ5MTMzODN9.Y3qTGXjEApBD5CT0Li3eq9G14onxpdChi38d6J8tdhM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \r\n\"status\":\"OnGoing\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8200/api/v1/todos:1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8200",
+					"path": [
+						"api",
+						"v1",
+						"todos:1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete to do data",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NDkxMjQ4MywianRpIjoiNjg0NWMzNWUtNzZkZC00ZDQ3LTg1NTctMzg2YjFiODY5ZjkyIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNjY0OTEyNDgzLCJleHAiOjE2NjQ5MTMzODN9.Y3qTGXjEApBD5CT0Li3eq9G14onxpdChi38d6J8tdhM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8200/api/v1/todos:1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8200",
+					"path": [
+						"api",
+						"v1",
+						"todos:1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
